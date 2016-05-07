@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="294" id="caQ-bn-sag" customClass="VideoModelCell">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="294"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="caQ-bn-sag" id="Tse-fe-Doy">
+                <rect key="frame" x="0.0" y="0.0" width="449" height="293"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sN-he-rCu">
+                        <rect key="frame" x="16" y="3" width="417" height="235"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Yl-Rp-Lj5">
+                                <rect key="frame" x="0.0" y="0.0" width="417" height="235"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2U-tT-9MR">
+                                <rect key="frame" x="178" y="88" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CTO-cX-dWB"/>
+                                    <constraint firstAttribute="width" constant="60" id="ege-Ef-WNp"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="视频"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="235" id="30N-yu-Vwc"/>
+                            <constraint firstItem="3Yl-Rp-Lj5" firstAttribute="top" secondItem="8sN-he-rCu" secondAttribute="top" id="3qA-RI-XBG"/>
+                            <constraint firstAttribute="bottom" secondItem="3Yl-Rp-Lj5" secondAttribute="bottom" id="9Ig-7w-mUd"/>
+                            <constraint firstAttribute="trailing" secondItem="3Yl-Rp-Lj5" secondAttribute="trailing" id="Clv-g9-ha9"/>
+                            <constraint firstItem="C2U-tT-9MR" firstAttribute="centerY" secondItem="3Yl-Rp-Lj5" secondAttribute="centerY" id="plz-84-SA7"/>
+                            <constraint firstItem="3Yl-Rp-Lj5" firstAttribute="leading" secondItem="8sN-he-rCu" secondAttribute="leading" id="uG4-ue-3cW"/>
+                            <constraint firstItem="C2U-tT-9MR" firstAttribute="centerX" secondItem="3Yl-Rp-Lj5" secondAttribute="centerX" id="zMk-v2-5V7"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glv-5j-t6x">
+                        <rect key="frame" x="16" y="243" width="417" height="42"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8sN-he-rCu" firstAttribute="leading" secondItem="Tse-fe-Doy" secondAttribute="leading" constant="16" id="3EJ-05-kjr"/>
+                    <constraint firstAttribute="trailing" secondItem="8sN-he-rCu" secondAttribute="trailing" constant="16" id="6Se-tw-Atd"/>
+                    <constraint firstAttribute="bottom" secondItem="glv-5j-t6x" secondAttribute="bottom" constant="8" id="HzZ-GS-Wv4"/>
+                    <constraint firstAttribute="trailing" secondItem="glv-5j-t6x" secondAttribute="trailing" constant="16" id="dDb-ns-GA8"/>
+                    <constraint firstItem="8sN-he-rCu" firstAttribute="top" secondItem="Tse-fe-Doy" secondAttribute="top" constant="3" id="iAw-0Z-Cwv"/>
+                    <constraint firstItem="glv-5j-t6x" firstAttribute="leading" secondItem="Tse-fe-Doy" secondAttribute="leading" constant="16" id="mSp-IZ-u5i"/>
+                    <constraint firstItem="glv-5j-t6x" firstAttribute="top" secondItem="8sN-he-rCu" secondAttribute="bottom" constant="5" id="vch-Xx-t4L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="altLbl" destination="glv-5j-t6x" id="pz9-cc-HjV"/>
+                <outlet property="coverImgView" destination="3Yl-Rp-Lj5" id="UgP-XJ-s0g"/>
+                <outlet property="playBtn" destination="C2U-tT-9MR" id="DkF-Sk-d6x"/>
+                <outlet property="videoView" destination="8sN-he-rCu" id="j4u-of-hon"/>
+                <outlet property="videoViewHeight" destination="30N-yu-Vwc" id="WUm-mc-FnY"/>
+            </connections>
+            <point key="canvasLocation" x="470.5" y="211"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="视频" width="21" height="21"/>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentViewController">
+            <connections>
+                <outlet property="tableView" destination="hog-6g-RzO" id="XeZ-al-UDE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hn-xt-NnU">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydm-Ke-Rqw">
+                            <rect key="frame" x="2" y="2" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="IjB-8K-raX"/>
+                            </constraints>
+                            <state key="normal" image="weather_back"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="mJc-bl-Nlp"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回复详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBu-id-XKJ">
+                            <rect key="frame" x="266" y="0.0" width="68" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="1ke-dI-mu5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="ydm-Ke-Rqw" firstAttribute="leading" secondItem="2hn-xt-NnU" secondAttribute="leading" constant="2" id="2I9-sd-79f"/>
+                        <constraint firstAttribute="height" constant="44" id="Ofa-Bh-uJB"/>
+                        <constraint firstItem="nBu-id-XKJ" firstAttribute="centerY" secondItem="2hn-xt-NnU" secondAttribute="centerY" id="dtZ-hU-CMo"/>
+                        <constraint firstItem="nBu-id-XKJ" firstAttribute="centerX" secondItem="2hn-xt-NnU" secondAttribute="centerX" id="hUJ-MF-Qhy"/>
+                        <constraint firstItem="ydm-Ke-Rqw" firstAttribute="top" secondItem="2hn-xt-NnU" secondAttribute="top" constant="2" id="mb1-g3-T5P"/>
+                        <constraint firstAttribute="bottom" secondItem="ydm-Ke-Rqw" secondAttribute="bottom" constant="2" id="pkW-BI-90P"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hog-6g-RzO">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hog-6g-RzO" secondAttribute="trailing" id="26v-TC-Ama"/>
+                <constraint firstItem="hog-6g-RzO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HrF-aK-NPu"/>
+                <constraint firstAttribute="bottom" secondItem="hog-6g-RzO" secondAttribute="bottom" id="WDr-u2-xJr"/>
+                <constraint firstItem="hog-6g-RzO" firstAttribute="top" secondItem="2hn-xt-NnU" secondAttribute="bottom" id="b2E-JT-YSh"/>
+                <constraint firstItem="2hn-xt-NnU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jtf-RE-za0"/>
+                <constraint firstAttribute="trailing" secondItem="2hn-xt-NnU" secondAttribute="trailing" id="jux-aT-cTY"/>
+                <constraint firstItem="2hn-xt-NnU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l3C-pE-zhD"/>
+            </constraints>
+            <point key="canvasLocation" x="-191" y="469"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="weather_back" width="50" height="50"/>
+    </resources>
+</document>
